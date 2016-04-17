@@ -8,9 +8,9 @@ inherit update-rc.d systemd
 
 do_install_append() {
     install -d ${D}/${sysconfdir}/init.d
-		echo "omxplayer /usr/share/bbb/bbb.mp4" >> ${D}/${sysconfdir}/init.d/autoplay
+		echo "omxplayer --loop /usr/share/bbb/bbb.mp4" >> ${D}/${sysconfdir}/init.d/autoplay
+		chmod +x ${D}/${sysconfdir}/init.d/autoplay
 }
 
 INITSCRIPT_NAME = "autoplay"
-
-INITSCRIPT_NAME = "test"
+INITSCRIPT_PARAMS = "defaults 10"
