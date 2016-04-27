@@ -7,4 +7,6 @@ do_deploy_append() {
 	sed -i '/#hdmi_drive/ c\hdmi_drive=1' ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
 	sed -i '/#hdmi_group/ c\hdmi_group=2' ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
 	sed -i '/#hdmi_mode/ c\hdmi_mode=82' ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+  sed -i '/#hdmi_mode/ c\hdmi_mode=82' ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+  sed -i '/#hdmi_force_hotplug/ c\hdmi_force_hotplug=1' ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
 }
