@@ -1,0 +1,7 @@
+SYSTEMD_PACKAGES = "${PN}-server"
+
+# Override systemd config, only to change installation directory.
+PACKAGECONFIG[systemd] = "--enable-systemd-daemon --enable-systemd-login --enable-systemd-journal --with-systemduserunitdir=${systemd_system_unitdir},--disable-systemd-daemon --disable-systemd-login --disable-systemd-journal,systemd"
+# The unit files that were orginally under "user" were configured to get sucked up in pulseaudio-server.
+# Let's keep it the same, for consistency.
+FILES_${PN}-server += "${systemd_system_unitdir}/*"

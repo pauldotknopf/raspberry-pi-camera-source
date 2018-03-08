@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        "build/tmp/**/*": true,
+        "build/downloads": true,
+        "build/sstate-cache": true,
+        "build/cache": true
+    },
+    "files.watcherExclude": {
+        "build/tmp/**/*": true,
+        "build/downloads": true,
+        "build/sstate-cache": true,
+        "build/cache": true
+    }
+}

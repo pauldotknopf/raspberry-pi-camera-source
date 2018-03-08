@@ -9,4 +9,5 @@ do_deploy_append() {
 	sed -i '/#hdmi_mode/ c\hdmi_mode=82' ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
   sed -i '/#hdmi_mode/ c\hdmi_mode=82' ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
   sed -i '/#hdmi_force_hotplug/ c\hdmi_force_hotplug=1' ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+	sed -i '/#dtparam=audio/ c\dtparam=audio=on' ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
 }

@@ -1,0 +1,11 @@
+[Unit]
+Description=Autoplay
+After=pulseaudio.service
+
+[Service]
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/omxplayer --loop /usr/share/videos/arch-echo.mp4 -o local
+Restart=always
+
+[Install]
+WantedBy=graphical.target
