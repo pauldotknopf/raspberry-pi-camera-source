@@ -12,7 +12,6 @@ inherit systemd
 
 SYSTEMD_PACKAGES = "${PN}"
 SYSTEMD_SERVICE_${PN} = "autoplay.service"
-SYSTEMD_AUTO_ENABLE = "disable"
 
 do_install_append() {
   # systemd service install
