@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+DIRNAME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+docker run --rm -it -e USER_ID=$(id -u) \
+  -v /etc/localtime:/etc/localtime \
+  -v $DIRNAME:/repo \
+  -v $DIRNAME/build/sstate-cache:/repo/build/sstate-cache \
+  -v $DIRNAME/build/downloads:/repo/build/downloads \
+  -w /repo \
+  pauldotknopf/docker-yocto-build:xenial-v0.6.0-alpha.6 \
+  "source poky/oe-init-build-env && bash"

@@ -1,7 +1,7 @@
 SUMMARY = "The script that runs on startup that plays a video."
 DESCRIPTION = "The script that runs on startup that plays a video."
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=4d92cd373abda3937c2bc47fbc49d690 \
+LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=b97a012949927931feb7793eee5ed924 \
                     file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
 
 RDEPENDS_${PN} += "arch-echo"
